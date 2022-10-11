@@ -1,0 +1,217 @@
+libtest-manifest-perl (2.022-1) unstable; urgency=medium
+
+  * debian/copyright: replace tabs with spaces / remove trailing
+    whitespace.
+  * debian/watch: use uscan version 4.
+  * Import upstream version 2.022.
+  * Update years of upstream and packaging copyright.
+  * Declare compliance with Debian Policy 4.5.1.
+  * Set Rules-Requires-Root: no.
+  * Annotate test-only build dependencies with <!nocheck>.
+  * Bump debhelper-compat to 13.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 18 Jan 2021 23:18:15 +0100
+
+libtest-manifest-perl (2.021-1) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.3 (no changes needed)
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * Import upstream version 2.021.
+  * Update years of upstream and packaging copyright amd upstream license.
+  * Update debian/upstream/metadata.
+  * Declare compliance with Debian Policy 4.1.4.
+  * Bump debhelper compatibility level to 10.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 23 Jun 2018 22:05:21 +0200
+
+libtest-manifest-perl (2.02-3) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: change GitHub/CPAN URL(s) to HTTPS.
+  * debian/upstream/metadata: use HTTPS for GitHub URLs.
+  * Remove Jay Bonci from Uploaders. Thanks for your work!
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+  * Add empty debian/tests/pkg-perl/smoke-skip to keep pkg-perl-tools-
+    autopkgtest from removing test files that are required by some tests.
+  * Update years of packaging copyright.
+  * Drop ancient alternative build dependency on Test::More.
+  * Declare compliance with Debian Policy 4.0.1.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 15 Aug 2017 18:47:38 +0200
+
+libtest-manifest-perl (2.02-2) unstable; urgency=medium
+
+  * Team upload.
+  * Bump debhelper compatibility level to 9
+  * Declare compliance with Debian policy 3.9.6
+  * Drop explicitly runtime dependency on unversioned perl
+  * Mark package as autopkgtestable
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Mon, 28 Dec 2015 22:29:22 -0200
+
+libtest-manifest-perl (2.02-1) unstable; urgency=medium
+
+  * Add debian/upstream/metadata
+  * Imported upstream version 2.02
+  * Drop spelling.patch, merged upstream.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 04 Sep 2014 14:38:55 +0200
+
+libtest-manifest-perl (2.01-1) unstable; urgency=low
+
+  [ Ryan Niebur ]
+  * Email change: Jonathan Yu -> jawnsy@cpan.org
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Switch to "3.0 (quilt)" source format.
+  * Update copyright years and license stanzas.
+  * Declare compliance with Debian Policy 3.9.5.
+  * Bump debhelper compatibility level to 8.
+  * Add build dependency on Test::More 0.95.
+  * Add a spelling fix patch.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 23 Aug 2014 20:57:20 -0700
+
+libtest-manifest-perl (1.23-1) unstable; urgency=low
+
+  * New upstream release
+    + Warns about missing files and skips them, rather than trying to test them
+  * Added myself to Uploaders and Copyright
+  * Removed manpage section patch (they are no longer installed per upstream)
+  * Bumped d/compat to 7. Require debhelper 7 now.
+  * Use new short rules format.
+  * Standards-Version 3.8.2
+  * Removed redundant fields from d/control (priority/section)
+
+  [ gregor herrmann ]
+  * Add debian/README.source to document quilt usage, as required by
+    Debian Policy since 3.8.0.
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * debian/control: Added: ${misc:Depends} to Depends: field.
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * debian/copyright: update years of upstream copyright and switch to new
+    format.
+  * debian/control: remove build dependency on libtest-simple-perl and
+    runtime dependency on libtest-harness-perl; replace them by a dependency
+    on perl >= 5.8.8.
+
+ -- Jonathan Yu <frequency@cpan.org>  Fri, 17 Jul 2009 10:22:09 -0400
+
+libtest-manifest-perl (1.22-2) unstable; urgency=low
+
+  * debian/rules:
+    - touch Makefile in clean target after unpatching
+      Makefile.PL to prevent it from being re-built; allows building twice
+      in a row
+    - bring in line with current practice in general
+  * debian/watch: extended regexp for matching upstream releases.
+  * debian/copyright: update years of copyright, wording of licensing terms
+    and pointers to license files on Debian systems.
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 30 Apr 2008 22:44:22 +0200
+
+libtest-manifest-perl (1.22-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza).
+  * Set Maintainer to Debian Perl Group.
+  * Use dist-based URL in debian/watch.
+
+  [ David Paleino ]
+  * New upstream version
+  * debian/rules:
+    - don't ignore the return value of $(MAKE) clean
+    - updated to support quilt patch system
+  * debian/compat - updated to version 5
+  * debian/control:
+    - moved debhelper to Build-Depends (required by clean target)
+    - added quilt to Build-Depends
+    - updated Standards-Version to 3.7.3
+  * debian/patches:
+    - 01-fix_manpage_section.patch added - it fixes the manpage section
+      from "3" to "3pm"
+
+  [ Damyan Ivanov ]
+  * debian/watch:
+    + add v? to watchfile pattern
+    + do not allow underscores in version. they note a developer release
+  * debian/rules: revamped
+    + drop pwd/awk and use dh_listpackages to get package name
+    + drop unused dh_installman, dh_link and dh_strip
+    + add stamps and fix target dependencies accordingly
+    + put actual making and test suite in build-stamp target
+    + remove usr/lib/perl5 only if it exists and remove it verbosely
+    + when cleaning, use distclean
+  * debian/control: add libtest-pod-perl and libtest-pod-coverage-perl to
+    B-D-I
+  * Add myself to Uploaders
+
+ -- Damyan Ivanov <dmn@debian.org>  Wed, 09 Jan 2008 15:39:53 +0200
+
+libtest-manifest-perl (1.14-1) unstable; urgency=low
+
+  * New upstream version
+  * Watchfile tweak so uupdate will work
+
+ -- Jay Bonci <jaybonci@debian.org>  Thu,  7 Apr 2005 12:09:16 -0400
+
+libtest-manifest-perl (1.11-1) unstable; urgency=low
+
+  * New upstream version
+  * Fixes debian/watch file so uscan will work
+
+ -- Jay Bonci <jaybonci@debian.org>  Mon, 11 Oct 2004 02:02:38 -0400
+
+libtest-manifest-perl (0.92-1) unstable; urgency=low
+
+  * New Maintainer (Closes: #219823)
+  * New upstream version
+  * Bumped to policy-version 3.6.1.0 (no other changes)
+  * Added module-specific CPAN url
+  * Removed install file, as it is handled directly by the rules file
+
+ -- Jay Bonci <jaybonci@debian.org>  Tue, 11 Nov 2003 01:02:40 -0500
+
+libtest-manifest-perl (0.91-2) unstable; urgency=low
+
+  * debian/control: changed build dependency on 'debhelper' to '(>= 4.1)'
+  * debian/control: upgraded to Debian Policy 3.6.0 (no changes)
+
+ -- Ardo van Rangelrooij <ardo@debian.org>  Sun, 27 Jul 2003 08:09:43 -0500
+
+libtest-manifest-perl (0.91-1) unstable; urgency=low
+
+  * Initial release
+    (closes: Bug#193495)
+
+ -- Ardo van Rangelrooij <ardo@debian.org>  Fri, 16 May 2003 06:33:30 -0500

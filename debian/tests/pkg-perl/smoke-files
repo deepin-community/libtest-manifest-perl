@@ -1,0 +1,4 @@
+t/
+test_manifest
+test_manifest_levels
+test_manifest_with_include

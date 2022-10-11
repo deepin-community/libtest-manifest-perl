@@ -1,0 +1,25 @@
+Source: libtest-manifest-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Damyan Ivanov <dmn@debian.org>,
+           gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: libtest-pod-coverage-perl <!nocheck>,
+                     libtest-pod-perl <!nocheck>,
+                     perl
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtest-manifest-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtest-manifest-perl.git
+Homepage: https://metacpan.org/release/Test-Manifest
+Rules-Requires-Root: no
+
+Package: libtest-manifest-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Description: Perl module for interacting with a test manifest file
+ Test::Manifest is a Perl test framework that allows you to run any tests you
+ want based on the t/test_manifest file, in any order you desire (rather than
+ simply the ascii-betical order provided by default.)
